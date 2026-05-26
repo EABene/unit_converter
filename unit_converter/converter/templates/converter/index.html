@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit Converter</title>
+</head>
+<body>
+    <h1>Unit Converter</h1>
+
+    <form method="GET" action="/">
+        <input type="text" name="value" placeholder="Zahl eingeben">
+        
+        <select name="from_unit">
+            <option value="km">km</option>
+            <option value="miles">miles</option>
+        </select>
+
+        <span>→</span>
+
+        <select name="to_unit">
+            <option value="km">km</option>
+            <option value="miles">miles</option>
+        </select>
+
+        <button type="submit">Convert</button>
+    </form>
+    {% if result %}
+    <p>Ergebnis: {{ result }}</p>
+{% endif %}
+
+</body>
+</html>
